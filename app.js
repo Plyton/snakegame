@@ -172,11 +172,11 @@ class Board {
         <div class="parameters__wrp1">
         <h4 class="parameters__header">Выберите скорость игры:</h4>
     <p class="parameters__speed"><input type="radio" class="input-speed" id="speedSlow" name="speed" value="3">
-        <label for="speedSlow"> Медленная</label></p>
+        <label for="speedSlow"> медленная</label></p>
     <p class="parameters__speed"><input type="radio" class="input-speed" id="speedMiddle" name="speed" value="5">
-        <label for="speedMiddle">Средняя</label></p>
+        <label for="speedMiddle">средняя</label></p>
     <p class="parameters__speed"><input type="radio" class="input-speed" id="speedFast" name="speed" value="8">
-        <label for="speedFast">Быстрая</label></p>
+        <label for="speedFast">быстрая</label></p>
     </div>
     <div class="parameters__wrp2">
         <h4 class="parameters__header">Выберите длинну змейки:</h4>
@@ -423,7 +423,6 @@ class Game {
         if (this.status.isPlaying()) {
             this.status.setPaused();
             clearInterval(this.tickIdentifier);
-            clearInterval(this.stopBombIdentifier);
         }
     }
 
@@ -469,8 +468,7 @@ class Game {
     }
 
     setScore() {
-        this.totalScore++
-        this.scoreEl.innerText = `Счёт игры: ${this.totalScore}`;
+        this.scoreEl.innerText = `Счёт игры: ${++this.totalScore}`;
     }
 
     isGameLost() {
