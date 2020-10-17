@@ -1,0 +1,173 @@
+body {
+    background: url('img/snake.jpg');
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    background-color: green;
+    border-radius: 20px;
+}
+
+.header>h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: xxx-large;
+    font-family: cursive;
+}
+
+
+.table-wrp {
+    width: 50%;
+    border: 5px solid yellow;
+    border-radius: 3%;
+    padding: 10px;
+    background-color: darkslategray;
+    float: left;
+    margin-left: 10%;
+    position: relative;
+}
+
+#parameters {
+    display: flex;
+    background-color: green;
+    flex-wrap: wrap;
+    width: 60%;
+    justify-content: center;
+    position: absolute;
+    top: 21%;
+    left: 20%;
+    font-size: 24px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parameters__title {
+    text-align: center;
+}
+
+.parameters__wrp1,
+.parameters__wrp2 {
+    line-height: 18px;
+    background-color: green;
+}
+
+.parameters__wrp1 {
+    z-index: 1;
+}
+
+.parameters__wrp2 {
+    position: absolute;
+    top: 38.6%;
+}
+
+.parameters__speed {
+    margin-left: 29%;
+    font-size: 18px;
+}
+
+.parameters__winLength {
+    margin-left: 40%;
+    font-size: 18px;
+}
+
+#game {
+    border-collapse: collapse;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    border: 1px solid yellowgreen;
+    border-radius: 20%;
+    transition: all 200ms ease-in;
+}
+
+.food {
+    background-image: url('img/food.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45px;
+}
+
+.bomb {
+    background-image: url('img/bomb.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+}
+
+.snakeBody {
+    background: yellow;
+}
+
+.menu-wrp {
+    min-height: 560px;
+    width: 20%;
+    margin-right: 10%;
+    float: right;
+    text-align: center;
+    background-color: green;
+    border-radius: 20px;
+}
+
+#score {
+    display: block;
+    color: white;
+    font-size: 30px;
+    margin-top: 95%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+
+}
+
+#message {
+    display: block;
+    color: yellow;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.buttons {
+    width: 52%;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    box-sizing: border-box;
+    width: 72%;
+}
+
+button {
+    width: 180px;
+    padding: 15px;
+    margin: 10px;
+    color: white;
+    background: #007b32;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+
+button:hover {
+    background: #009641;
+}
+
+button:active {
+    background: #9cfb02;
+    color: black;
+}
+
+.parameters--z-index {
+    z-index: 2;
+}
