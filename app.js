@@ -48,6 +48,12 @@ class Status {
     setPaused() {
         this.status = 'paused';
     }
+
+    setGameOver() {
+        this.status = 'game over'
+    }
+ 
+
     isPlaying() {
         return this.status === 'playing';
     }
@@ -475,6 +481,7 @@ class Game {
         if (this.board.isNextStepBody(this.snake.bodySnake[0]) || this.board.isNextStepBomb(this.snake.bodySnake[0])) {
             clearInterval(this.tickIdentifier);
             this.setMessage('Вы проиграли');
+            this.status.setGameOver();
             return true;
         }
         return false;
@@ -484,6 +491,7 @@ class Game {
         if (this.snake.bodySnake.length === this.settings.winlength) {
             clearInterval(this.tickIdentifier);
             this.setMessage('Вы выиграли');
+            this.status.setGameOver();
             return true;
         }
         return false;
