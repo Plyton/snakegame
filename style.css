@@ -168,6 +168,20 @@ button:active {
     color: black;
 }
 
+label:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+label:active {
+    color: white;
+    
+}
+
+input[type="radio"] {
+    visibility: hidden;
+}
+
 .parameters--z-index {
     z-index: 2;
 }
